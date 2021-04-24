@@ -6,6 +6,7 @@ class Ranks extends CodonModule
 
 		public function index()
 {
+	  $this->set('copyright', RanksData::getVersion());
 		$this->set('ranks', RanksData::GetRanks());
 		$this->render('ranks/ranks.php');
 
@@ -21,7 +22,7 @@ class Ranks extends CodonModule
 		public function copyright()
 		{
 			$this->set('copyright', RanksData::getVersion());
-			$this->render('radio/footer.php');
+			$this->render('rank/footer.php');
 		}
 }
 ?>
