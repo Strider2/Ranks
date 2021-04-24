@@ -12,7 +12,7 @@ class Ranks extends CodonModule
 		}
 		public function rank_details($rankid='')
 		{
-			//$this->set('copyright', CodeShareData::getVersion());
+			$this->set('copyright', RanksData::getVersion());
 			$aircrafts = RankStats::aircraft($rankid);
 			$ranks = RanksData::GetRank($rankid);
 			$this->set('ranks', $ranks);
